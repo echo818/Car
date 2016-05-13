@@ -1,0 +1,442 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="telephone=no" name="format-detection" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <script type="text/javascript" src="./js/jquery-1.11.2.min.js" ></script>
+    <script type="text/javascript" src="./js/script.js" ></script>
+</head>
+<body>
+    <div class="bindSuccess">
+		<ul>
+			<li>
+				<div class="bind-left fl">设备</div>
+				<div class="bind-right bind-type fr">egocaar A28</div>
+			</li>
+			<li>
+				<div class="bind-left fl">设备IMEI号</div>
+				<div class="bind-right fr">XXXX-XXXX-XXXX</div>
+			</li>
+		</ul>
+    </div>
+	<div class="bind">
+		<form action="javascript:void(0);" method="post" name="bind">
+			<ul>
+				<li>
+					<div class="bind-left bind-must fl"><i>*</i>车牌号</div>
+					<div class="bind-right fr">
+						<div class="bind-license fl"></div>
+						<div class="bind-icon fl"><img src="./images/right.png"></div>
+						<div class="bind-license-num fl">
+							<input type="text" name="licenseNum" placeholder="车牌号">
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="bind-left fl">车品牌</div>
+					<div class="bind-right fr">
+						<div class="bind-brand fl"></div>
+						<div class="bind-icon bind-brand-icon fl"><img src="./images/more.png"></div>
+						<!-- <div class="bind-brand-other fl">
+							<input type="text" name="brandOther" placeholder="其他车型">
+						</div> -->
+					</div>
+				</li>
+				<li>
+					<div class="bind-left fl"></div>
+					<div class="bind-right fr">
+						<div class="bind-brand-other fl">
+							<input type="text" name="brandOther" placeholder="其他车型">
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="bind-left fl">设备端sim卡号码</div>
+					<div class="bind-right fr">
+						<div class="bind-car-code fl">
+							<input type="text" name="carCode" placeholder="设备端sim卡号码" maxlength="11" onkeyup="value=value.replace(/[^\d]/g,'') ">
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="bind-left fl">车辆识别码/VIN</div>
+					<div class="bind-right fr">
+						<div class="bind-car-code fl">
+							<input type="text" name="carCode" placeholder="后6位" maxlength="6" onkeyup="value=value.replace(/[^0-9a-zA-Z]/g,'') ">
+						</div>
+						<div class="bind-rihgt-tips bind_question fl">
+							<img src="./images/question.png">
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="bind-left fl">发动机号</div>
+					<div class="bind-right fr">
+						<div class="bind-car-code fl">
+							<input type="text" name="engineCode" placeholder="后6位" maxlength="6" onkeyup="value=value.replace(/[^0-9a-zA-Z]/g,'') ">
+						</div>
+						<div class="bind-rihgt-tips bind_questions fl">
+							<img src="./images/question.png">
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="bind-left fl">行驶证注册</div>
+					<div class="bind-right fr">
+						<div class="bind-car-num fl">
+							<input type="date" name="regTime" placeholder="选择时间">
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="bind-left fl">车辆行驶里程数</div>
+					<div class="bind-right fr">
+						<div class="bind-car-num fl">
+							<input type="text" name="regTime" placeholder="里程数" maxlength="6" onkeyup="value=value.replace(/[^\d]/g,'') ">
+						</div>
+						<div class="bind-car-distance fl">公里</div>
+					</div>
+				</li>
+			</ul>
+			<div class="bind-submit">
+				<input type="submit" value="绑定">
+			</div>
+			<div class="bind-tips"><i>*</i>号为必填</div>
+		</form>
+	</div>
+	<div class="bind-choose-brand">
+		<div class="bind-choose-main">
+			<div class="bind-choose-head">
+				选择品牌
+				<div class="bind-hidden hidden-brand">
+					<img src="./images/down.png">
+				</div>
+			</div>
+			<div class="bind-wrapper">
+				<div class="bind-choose-type">
+					<div class="bind-item">
+						<img src="./images/car_brand.png">
+						<h3>奥迪</h3>
+					</div>
+					<div class="bind-item">
+						<img src="./images/car_brand.png">
+						<h3>奥迪11</h3>
+					</div>
+					<div class="bind-item">
+						<img src="./images/car_brand.png">
+						<h3>奥迪22</h3>
+					</div>
+					<div class="bind-item">
+						<img src="./images/car_brand.png">
+						<h3>奥迪33</h3>
+					</div>
+					<div class="bind-item">
+						<img src="./images/car_brand.png">
+						<h3>奥迪44</h3>
+					</div>
+					<div class="bind-item">
+						<img src="./images/car_brand.png">
+						<h3>奥迪55</h3>
+					</div>
+					<div class="bind-item">
+						<img src="./images/car_brand.png">
+						<h3>奥迪66</h3>
+					</div>
+					<div class="bind-item">
+						<img src="./images/car_brand.png">
+						<h3>奥迪77</h3>
+					</div>
+					<div class="bind-item">
+						<img src="./images/car_brand.png">
+						<h3>奥迪88</h3>
+					</div>
+				</div>
+			</div>
+			<div class="bind-wrap">
+				<div class="bind-choose-child">
+					<div class="bind-kind">520Li 典雅型</div>
+					<div class="bind-kind">520Li 典雅型</div>
+					<div class="bind-kind">520Li 典雅型</div>
+					<div class="bind-kind">520Li 典雅型</div>
+					<div class="bind-kind">520Li 典雅型</div>
+					<div class="bind-kind">520Li 典雅型</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bind-choose-license">
+		<div class="bind-choose-main">
+			<div class="bind-choose-head">
+				选择车牌
+				<div class="bind-hidden hidden-license">
+					<img src="./images/down.png">
+				</div>
+			</div>
+			<div class="bind-wrapper">
+				<div class="bind-choose-type">
+					<!-- 第一次车牌绑定选择格式
+					<div class="bind-items"><span>京</span><i>北京</i></div> -->
+					<!-- 第二次车牌绑定选择格式 -->
+					<div class="bind-items">
+						<div class="bind-items-name">京</div>
+						<div class="bind-items-small">北京</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">津</div>
+						<div class="bind-items-small">天津</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">京</div>
+						<div class="bind-items-small">北京</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">津</div>
+						<div class="bind-items-small">天津</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">津</div>
+						<div class="bind-items-small">天津</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">京</div>
+						<div class="bind-items-small">北京</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">津</div>
+						<div class="bind-items-small">天津</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">京</div>
+						<div class="bind-items-small">北京</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">津</div>
+						<div class="bind-items-small">天津</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">津</div>
+						<div class="bind-items-small">天津</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">京</div>
+						<div class="bind-items-small">北京</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">津</div>
+						<div class="bind-items-small">天津</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">京</div>
+						<div class="bind-items-small">北京</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">津</div>
+						<div class="bind-items-small">天津</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">津</div>
+						<div class="bind-items-small">天津</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">京</div>
+						<div class="bind-items-small">北京</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">津</div>
+						<div class="bind-items-small">天津</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">京</div>
+						<div class="bind-items-small">北京</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">津</div>
+						<div class="bind-items-small">天津</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">津</div>
+						<div class="bind-items-small">天津</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">京</div>
+						<div class="bind-items-small">北京</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">津</div>
+						<div class="bind-items-small">天津</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">京</div>
+						<div class="bind-items-small">北京</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">津</div>
+						<div class="bind-items-small">天津</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">津</div>
+						<div class="bind-items-small">天津</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">京</div>
+						<div class="bind-items-small">北京</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">津</div>
+						<div class="bind-items-small">天津</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">京</div>
+						<div class="bind-items-small">北京</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">津</div>
+						<div class="bind-items-small">天津</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">津</div>
+						<div class="bind-items-small">天津</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">京</div>
+						<div class="bind-items-small">北京</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">津</div>
+						<div class="bind-items-small">天津</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">京</div>
+						<div class="bind-items-small">北京</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">津</div>
+						<div class="bind-items-small">天津</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">津</div>
+						<div class="bind-items-small">天津</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">京</div>
+						<div class="bind-items-small">北京</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">津</div>
+						<div class="bind-items-small">天津</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">京</div>
+						<div class="bind-items-small">北京</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">津</div>
+						<div class="bind-items-small">天津</div>
+					</div>
+					<div class="bind-items">
+						<div class="bind-items-name">津</div>
+						<div class="bind-items-small">天津</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bind-choose-question bind-question">
+		<img src="./images/bind_question.png">
+		<div class="bind-question-close bind-close">关闭</div>
+	</div>
+	<div class="bind-choose-question bind-questions">
+		<img src="./images/bind_questions.png">
+		<div class="bind-question-close bind-closes">关闭</div>
+	</div>
+</body>
+<script>
+	$(document).ready(function(){
+		$(".bind-license-num input:text").bind("input propertychange",function(){
+			var text = $('.bind-license').text();
+			var val = $('.bind-license-num input').val();
+			if(text!==''&&val!==''){
+				$('.bind-submit').addClass('bind-submit-active');
+			}else{
+				$('.bind-submit').removeClass('bind-submit-active');
+			}
+		});
+		
+		$('.bind-license').on('click',function(){
+			$('.bind-choose-license').css('display','block');
+		});
+		
+		$('.bind-brand').on('click',function(){
+			$('.bind-choose-brand').css('display','block');
+		});
+		
+		$('.hidden-license').on('click',function(){
+			$('.bind-choose-license').css('display','none');
+		});
+		
+		$('.hidden-brand').on('click',function(){
+			$('.bind-choose-brand').css('display','none');
+		});
+		
+		/*$('.bind-item').on('click',function(){
+			var brand = $(this).children('h3').html();
+			$('.bind-brand').html(brand);
+			$('.bind-choose-brand').css('display','none');
+		});*/
+		
+		$('.bind-item').on('click',function(){
+			brand = $(this).children('h3').html();
+			//$('.bind-brand').html(brand);
+			$('.bind-wrap').css('display','block');
+		});
+		
+		$('.bind-kind').on('click',function(){
+			var kind = $(this).html();
+			$('.bind-brand').html(brand+' '+kind);
+			$('.bind-wrap').css('display','none');
+			$('.bind-choose-brand').css('display','none');
+		});
+		
+		/*$('.bind-items').on('click',function(){
+			var license = $(this).children('span').html();
+			$('.bind-license').html(license);
+			$('.bind-choose-license').css('display','none');
+		});*/
+		
+		$('.bind-items').on('click',function(){
+			var license = $(this).children('.bind-items-name').html();
+			$('.bind-license').html(license);
+			$('.bind-choose-license').css('display','none');
+			var val = $('.bind-license-num input').val();
+			if(val!==''){
+				$('.bind-submit').addClass('bind-submit-active');
+			}else{
+				$('.bind-submit').removeClass('bind-submit-active');
+			}
+		});
+		
+		$('.bind_question img').on('click',function(){
+			$('.bind-question').show();/*css('display','block');*/
+		});
+		
+		$('.bind-close').on('click',function(){
+			$('.bind-question').css('display','none');
+		});
+
+		$('.bind_questions img').on('click',function(){
+			$('.bind-questions').show();/*css('display','block');*/
+		});
+		
+		$('.bind-closes').on('click',function(){
+			$('.bind-questions').css('display','none');
+		});
+	})
+</script>
+</html>
